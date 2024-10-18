@@ -105,15 +105,7 @@
       }
     },
     "GPT_API_KEY" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "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"
-          }
-        }
-      }
+      "extractionState" : "manual"
     },
     "HEALTHKIT_PERMISSIONS_BUTTON" : {
       "localizations" : {
