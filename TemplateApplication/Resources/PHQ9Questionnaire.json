@@ -1,0 +1,423 @@
+{
+  "resourceType": "Questionnaire",
+  "language": "nb-NO",
+  "status": "draft",
+  "publisher": "NHN",
+  "meta": {
+    "profile": ["http://ehelse.no/fhir/StructureDefinition/sdf-Questionnaire"],
+    "tag": [
+      { "system": "urn:ietf:bcp:47", "code": "nb-NO", "display": "Bokmål" }
+    ],
+    "security": [
+      {
+        "code": "3",
+        "display": "Helsehjelp (Full)",
+        "system": "urn:oid:2.16.578.1.12.4.1.1.7618"
+      }
+    ]
+  },
+  "contact": [{ "name": "http://www.nhn.no" }],
+  "subjectType": ["Patient"],
+  "extension": [
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-sidebar",
+      "valueCoding": {
+        "system": "http://helsenorge.no/fhir/ValueSet/sdf-sidebar",
+        "code": "1"
+      }
+    },
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-information-message",
+      "valueCoding": {
+        "system": "http://helsenorge.no/fhir/ValueSet/sdf-information-message",
+        "code": "1"
+      }
+    },
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefintion/sdf-itemControl-visibility",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+            "code": "hide-help",
+            "display": "Hide help texts"
+          },
+          {
+            "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+            "code": "hide-sublabel",
+            "display": "Hide sublabel texts"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "d077b69b-96f3-4235-ba72-4bdca9d7a23c",
+  "item": [
+    {
+      "linkId": "971211f7-a70c-4419-8ba2-82425106e1b9",
+      "type": "display",
+      "text": "Over the last 2 weeks, how often have you been bothered by any of the following problems?",
+      "required": false
+    },
+    {
+      "linkId": "b5e3f112-f03a-4ea2-8fb6-bdb35bf12161",
+      "type": "choice",
+      "text": "Little interest or pleasure in doing things",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "a06f28b1-1382-497a-89c9-b310ecbdd3a2",
+      "type": "choice",
+      "text": "Feeling down, depressed, or hopeless ",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "e4f195eb-6d0b-47ae-8ed2-c9f1280836e2",
+      "type": "choice",
+      "text": "Trouble falling or staying asleep, or sleeping too much",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "3ab99c2a-4efb-4aaf-8c40-ecdb253c3018",
+      "type": "choice",
+      "text": "Feeling tired or having little energy ",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "5f43d316-105f-4f75-ccf0-1fe5e6d6a65c",
+      "type": "choice",
+      "text": "Poor appetite or overeating ",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "4d7294cf-b3d7-412f-82c4-f72d8fab53e1",
+      "type": "choice",
+      "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down ",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "6f9c6793-e14d-47db-c180-e597a3f35920",
+      "type": "choice",
+      "text": "Trouble concentrating on things, such as reading the newspaper or watching television ",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "fea19cd0-37e2-4aac-8f7d-0884d53b0383",
+      "type": "choice",
+      "text": "Moving or speaking so slowly that other people could have noticed?  Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual ",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "adce80ed-f272-4bc4-84cd-cf8f048048e5",
+      "type": "choice",
+      "text": "Thoughts that you would be better off dead or of hurting yourself in some way ",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "2cc516c0-6830-4475-8315-e765131f5db0",
+            "code": "0",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Not at all "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "63e4d19c-1b7b-4dcd-890a-70b76aff8f47",
+            "code": "1",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Several days "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "020125b5-489b-4ee3-89f2-9746634d98bf",
+            "code": "2",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "More than half the days"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ce094543-c575-4d0c-9ce6-410c5e64ec03",
+            "code": "3",
+            "system": "urn:uuid:e349d8aa-d875-4da8-8b4b-c65251e475bd",
+            "display": "Nearly every day "
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ import SpeziScheduler
 import SwiftUI
 
 
-/// Displays an multi-step onboarding flow for the Spezi Template Application.
+/// Displays a multi-step onboarding flow for the Spezi Template Application.
 struct OnboardingFlow: View {
     @Environment(HealthKit.self) private var healthKitDataSource
     @Environment(TemplateApplicationScheduler.self) private var scheduler
@@ -54,6 +54,9 @@ struct OnboardingFlow: View {
             if !localNotificationAuthorization {
                 NotificationPermissions()
             }
+            
+            // Add the OpenAI API Key Onboarding Step
+            OpenAIAPIKeyOnboardingStep()
         }
             .task {
                 localNotificationAuthorization = await scheduler.localNotificationAuthorization

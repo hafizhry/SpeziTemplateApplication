@@ -18,6 +18,9 @@ import SpeziHealthKit
 import SpeziOnboarding
 import SpeziScheduler
 import SwiftUI
+import SpeziLLMOpenAI
+import SpeziLLM
+
 
 
 class TemplateApplicationDelegate: SpeziAppDelegate {
@@ -51,6 +54,11 @@ class TemplateApplicationDelegate: SpeziAppDelegate {
             
             TemplateApplicationScheduler()
             OnboardingDataSource()
+            
+            // Add LLMRunner with OpenAI Platform
+            LLMRunner {
+                LLMOpenAIPlatform()
+            }
         }
     }
 

@@ -65,17 +65,46 @@ struct EventContextView: View {
 
 #if DEBUG
 #Preview(traits: .sizeThatFitsLayout) {
-    let task = TemplateApplicationScheduler.socialSupportTask
+    let socialSupportTask = TemplateApplicationScheduler.socialSupportTask
+    let testTask = TemplateApplicationScheduler.testTask
+    let phq9Task = TemplateApplicationScheduler.phq9Task
     
-    return EventContextView(
-        eventContext: EventContext(
-            // We use a force unwrap in the preview as we can not recover from an error here
-            // and the code will never end up in a production environment.
-            // swiftlint:disable:next force_unwrapping
-            event: task.events(from: .now.addingTimeInterval(-60 * 60 * 24)).first!,
-            task: task
+    return VStack {
+        // Preview for the socialSupportTask
+        EventContextView(
+            eventContext: EventContext(
+                // We use a force unwrap in the preview as we can not recover from an error here
+                // and the code will never end up in a production environment.
+                // swiftlint:disable:next force_unwrapping
+                event: socialSupportTask.events(from: .now.addingTimeInterval(-60 * 60 * 24)).first!,
+                task: socialSupportTask
+            )
         )
-    )
         .padding()
+        
+        // Preview for the testTask
+        EventContextView(
+            eventContext: EventContext(
+                // We use a force unwrap in the preview as we can not recover from an error here
+                // and the code will never end up in a production environment.
+                // swiftlint:disable:next force_unwrapping
+                event: testTask.events(from: .now.addingTimeInterval(-60 * 60 * 24)).first!,
+                task: testTask
+            )
+        )
+        .padding()
+        
+        // Preview for the phq9Task
+        EventContextView(
+            eventContext: EventContext(
+                // We use a force unwrap in the preview as we can not recover from an error here
+                // and the code will never end up in a production environment.
+                // swiftlint:disable:next force_unwrapping
+                event: phq9Task.events(from: .now.addingTimeInterval(-60 * 60 * 24)).first!,
+                task: phq9Task
+            )
+        )
+        .padding()
+    }
 }
 #endif

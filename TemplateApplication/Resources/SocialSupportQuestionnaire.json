@@ -10,7 +10,7 @@
   "publisher": "RAND Corp",
   "meta": {
     "profile": [
-      "http://spezi.stanford.edu/fhir/StructureDefinition/sdf-Questionnaire"
+      "displayQuestionnaire"
     ],
     "tag": [
       {

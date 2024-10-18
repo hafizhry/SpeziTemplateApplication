@@ -17,7 +17,7 @@ struct Contacts: View {
     let contacts = [
         Contact(
             name: PersonNameComponents(
-                givenName: "Leland",
+                givenName: "Leland V.",
                 familyName: "Stanford"
             ),
             image: Image(systemName: "figure.wave.circle"), // swiftlint:disable:this accessibility_label_for_image

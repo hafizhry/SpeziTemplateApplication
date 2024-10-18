@@ -1,0 +1,819 @@
+{
+    "resourceType": "Questionnaire",
+    "language": "nb-NO",
+    "id": "test",
+    "name": "Test",
+    "status": "draft",
+    "publisher": "NHN",
+    "meta": {
+        "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/sdf-Questionnaire"
+        ],
+        "tag": [
+            {
+                "system": "urn:ietf:bcp:47",
+                "code": "nb-NO",
+                "display": "Bokmål"
+            }
+        ],
+        "security": [
+            {
+                "code": "3",
+                "display": "Helsehjelp (Full)",
+                "system": "urn:oid:2.16.578.1.12.4.1.1.7618"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "name": "http://www.nhn.no"
+        }
+    ],
+    "subjectType": [
+        "Patient"
+    ],
+    "extension": [
+        {
+            "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-sidebar",
+            "valueCoding": {
+                "system": "http://helsenorge.no/fhir/ValueSet/sdf-sidebar",
+                "code": "1"
+            }
+        },
+        {
+            "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-information-message",
+            "valueCoding": {
+                "system": "http://helsenorge.no/fhir/ValueSet/sdf-information-message",
+                "code": "1"
+            }
+        },
+        {
+            "url": "http://helsenorge.no/fhir/StructureDefintion/sdf-itemControl-visibility",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+                        "code": "hide-help",
+                        "display": "Hide help texts"
+                    },
+                    {
+                        "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+                        "code": "hide-sublabel",
+                        "display": "Hide sublabel texts"
+                    }
+                ]
+            }
+        }
+    ],
+    "item": [
+        {
+            "linkId": "5eb88155-4178-4e30-8701-c6f5e4a55946",
+            "type": "date",
+            "required": true,
+            "text": "When is the examination carried out?",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Kapan pemeriksaan dilakukan?"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "extension": [
+                {
+                    "url": "http://ehelse.no/fhir/StructureDefinition/sdf-maxvalue",
+                    "valueString": "today()"
+                },
+                {
+                    "url": "http://ehelse.no/fhir/StructureDefinition/validationtext",
+                    "valueString": "Enter a valid date"
+                }
+            ]
+        },
+        {
+            "linkId": "6f4f018f-e47a-4e52-cee9-f877506c7e7a",
+            "type": "decimal",
+            "text": "Body weight (in kg)",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Berat Badan (BB) dalam kg"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "required": true,
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces",
+                    "valueInteger": 2
+                },
+                {
+                    "url": "http://ehelse.no/fhir/StructureDefinition/validationtext",
+                    "valueString": "Please enter a valid number (0 - 99) and < 2 decimal digits"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                    "valueInteger": 31
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                    "valueInteger": 3
+                }
+            ]
+        },
+        {
+            "linkId": "e0d068e6-6c58-46fd-8784-ae18be16e514",
+            "type": "decimal",
+            "text": "Body height (in cm)",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Tinggi Badan (TB) dalam cm"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "required": true,
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces",
+                    "valueInteger": 2
+                },
+                {
+                    "url": "http://ehelse.no/fhir/StructureDefinition/validationtext",
+                    "valueString": "Please enter a valid number (0 - 999) and < 2 decimal digits"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                    "valueInteger": 44
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                    "valueInteger": 119
+                }
+            ]
+        },
+        {
+            "linkId": "61620a54-4536-40c3-8177-d728ca001d0c",
+            "type": "decimal",
+            "text": "Head circumference (in cm)",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Lingkar Kepala (LK) dalam cm"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces",
+                    "valueInteger": 2
+                },
+                {
+                    "url": "http://ehelse.no/fhir/StructureDefinition/validationtext",
+                    "valueString": "Please enter a valid number (0 - 999) and < 2 decimal digits"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                    "valueInteger": 29
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                    "valueInteger": 55
+                }
+            ],
+            "required": true
+        },
+        {
+            "linkId": "a64cc808-8aaf-4cdc-8216-7e77e143175b",
+            "type": "decimal",
+            "text": "Upper Arm Circumference (in cm)",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Lingkar Lengan Atas (LILA) dalam cm"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces",
+                    "valueInteger": 2
+                },
+                {
+                    "url": "http://ehelse.no/fhir/StructureDefinition/validationtext",
+                    "valueString": "Please enter a valid number (0 - 99) and < 2 decimal digits"
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                    "valueInteger": 9
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                    "valueInteger": 22
+                }
+            ],
+            "required": true
+        },
+        {
+            "linkId": "af174771-f263-4a9a-d584-dbd1f1aabdb9",
+            "type": "choice",
+            "text": "Body Weight / Age",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Berat Badan / Umur"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "required": true,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "99a5fdb9-631b-4869-89cb-980d69d726ea",
+                        "code": "OI000007",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Severely underweight",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Berat Badan Sangat Kurang"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "a472644b-e87d-4b2b-f6a4-262dff031ed7",
+                        "code": "OI000008",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Underweight",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Berat Badan Kurang"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "47a55af3-b138-4cc8-9695-fbe8c4ceeba0",
+                        "code": "OI000009",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Normal body weight",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Berat Badan Normal"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "7c09bd3e-b137-4f5c-8e4e-6b1af5b5696b",
+                        "code": "OI000010",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Risk of being overweight",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Risiko Berat Badan Lebih"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                                "code": "drop-down"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "380f8006-3e86-42f1-8bea-054a7acec404",
+            "type": "choice",
+            "text": "Body weight / body height",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Berat Badan / Tinggi Badan"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "required": true,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "99a5fdb9-631b-4869-89cb-980d69d726ea",
+                        "code": "OI000001",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Severely wasted",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Gizi buruk"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "a472644b-e87d-4b2b-f6a4-262dff031ed7",
+                        "code": "OI000002",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Wasted",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Gizi kurang"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "47a55af3-b138-4cc8-9695-fbe8c4ceeba0",
+                        "code": "normal",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Normal",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Gizi normal"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "7c09bd3e-b137-4f5c-8e4e-6b1af5b5696b",
+                        "code": "OI000005",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Overweight",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Gizi lebih"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "d42178f6-a900-414e-9fb6-08ada73dcde2",
+                        "code": "OI000006",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Obese",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Obesitas"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                                "code": "drop-down"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "5a93c28b-ff48-4ed8-86ed-5d1378dbae2e",
+            "type": "choice",
+            "text": "Body Height / Age",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Tinggi Badan / Umur"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "required": true,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "99a5fdb9-631b-4869-89cb-980d69d726ea",
+                        "code": "OI000011",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Severely stunted",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Sangat pendek"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "a472644b-e87d-4b2b-f6a4-262dff031ed7",
+                        "code": "OI000012",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Stunted",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Pendek"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "47a55af3-b138-4cc8-9695-fbe8c4ceeba0",
+                        "code": "normal",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Normal",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Tinggi normal"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "7c09bd3e-b137-4f5c-8e4e-6b1af5b5696b",
+                        "code": "tall",
+                        "system": "https://terminology.kemkes.go.id/CodeSystem/clinical-term",
+                        "display": "Tall",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Tinggi"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                                "code": "drop-down"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "008b4a81-9ead-4eac-8b9c-331f868dccca",
+            "type": "choice",
+            "text": "Head circumference / Age",
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "id"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Lingkar Kepala / Umur"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "required": true,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "id": "99a5fdb9-631b-4869-89cb-980d69d726ea",
+                        "code": "1148757008",
+                        "system": "http://snomed.info/sct",
+                        "display": "Microcephaly",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Lingkar kepala kecil"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "a472644b-e87d-4b2b-f6a4-262dff031ed7",
+                        "code": "99999",
+                        "system": "http://snomed.info/sct",
+                        "display": "Normal",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Lingkar kepala noral"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "id": "47a55af3-b138-4cc8-9695-fbe8c4ceeba0",
+                        "code": "1145403003",
+                        "system": "http://snomed.info/sct",
+                        "display": "Macrocephaly",
+                        "_display": {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "id"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Lingkar kepala besar"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                                "code": "drop-down"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
